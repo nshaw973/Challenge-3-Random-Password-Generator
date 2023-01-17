@@ -41,7 +41,46 @@ console.log(passLength);
 var passOptions = [];
 //--------------------------------------------------------------------------------------------------------------------------------------------------//
 
+//Function for the Prompts
+//--------------------------------------------------------------------------------------------------------------------------------------------------//
+function getPrompts() {
+  passLength = (window.prompt("Choose a password length between 8-128 characters:"))
+  console.log(passLength)
+  //isNaN is making sure what is entered is a number and then its making sure that number isn't less than 8 or greater than 128
+  if (isNaN(passLength) || passLength < 8 || passLength > 128) {
+    alert("please choose between 8-128")
+    //closes the window when the wrong number is chosen after alerting the user that the number must be between 1-128
+    //if it failed to meet the criteria, it reverts passLength to 0 and creates the options to 0 to avoid creating an "Undefined" value
+    passLength = 0
+    passOptions = [];
+    return;
+  }
+  //adding confirm windows creates a true or false scenario where its either a yes or no situation.
+  if (confirm("Add lowercase letters?")){
+    //concat is concatinate and its combining the choices into the passOptions array
+    //added console.log to see how each option is combined as user goes through each prompt
+    passOptions = passOptions.concat(lwrCaseChar);
+    console.log(passOptions)
+  }
 
+  if (confirm("Add uppercase letters?")){
+    passOptions = passOptions.concat(uppCaseChar);
+    console.log(passOptions)
+  }
+
+  if (confirm("Add Special Characters?")){
+    passOptions = passOptions.concat(spcCharacters);
+    console.log(passOptions)
+  }
+
+  if (confirm("Add numbers?")){
+    passOptions = passOptions.concat(nmbCharacters);
+    console.log(passOptions)
+  }
+  return;
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------//
 
 
 
