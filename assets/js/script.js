@@ -41,6 +41,28 @@ console.log(passLength);
 var passOptions = [];
 //--------------------------------------------------------------------------------------------------------------------------------------------------//
 
+
+
+//This function will generate the password based on what is given in the prompts
+//had to look at the R,P,S acitivity for this one and a video on for loops and random generation because it was a bit confusing for me
+//--------------------------------------------------------------------------------------------------------------------------------------------------//
+function generatePassword() {
+  var genPass = "";
+  console.log(genPass)
+  //this will loop each individual character from the passOptions and give a random character per index, until the loop of i is the same as the length chosen.
+  for(var i = 0; i < passLength; i++) {
+    //The Math random is going to give a random letter, number or special character based on the length of the pass chosen
+    var ranChar = Math.floor(Math.random() * passOptions.length);
+    //the gen password is going to keep adding characters 1 by one per loop. 
+    genPass = genPass + passOptions[ranChar];
+  }
+
+  return genPass;
+}
+//--------------------------------------------------------------------------------------------------------------------------------------------------//
+
+
+
 //Function for the Prompts
 //--------------------------------------------------------------------------------------------------------------------------------------------------//
 function getPrompts() {
