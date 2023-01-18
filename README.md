@@ -42,7 +42,14 @@ then reset the length to 0 and options to none, in orde to prevent an error wher
 Lastly the return was entered in to prevent any more prompts from appearing and to restart the prompts from the top after pressing the button again.
 The rest didn't involve any input from the user other than a true or false statement.
 
-![Window-Prompts-Code](./assets/images/Window-Prompts-Code.PNG)
+![Window-Prompts-Code](./assets/images/Password-Length.PNG)
+
+
+This contains the prompts the user is given when asked for Letters, Characters, and numbers.
+As well as the checks that happen if user decides to click cancel on all the Prompts besides the length which has it's own alert.
+
+
+![Window-Prompts-Code](./assets/images/Password-Prompts.PNG)
 
 
 Last bit of code needed was creating the randomly generated password based on what the user had given.
