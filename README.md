@@ -1,5 +1,9 @@
 # # 03 JavaScript: Password Generator
 
+## Link to Deployed Project
+
+https://nshaw973.github.io/Challenge-3-Random-Password-Generator/
+
 ## How to Use
 
 Click on the Generate Password button.
